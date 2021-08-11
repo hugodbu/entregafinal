@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+}
+
+.colorTitulos {
+  color: crimson;
+}
+
+.coloresNav {
+  color: grey;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.coloresNav:hover {
+  color: white;
+}
+
+p {
+  color: grey;
+  font-style: normal;
+  font-family: "Lexend", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+/* ESTILO NAV /*
+/* Declaro color principal del sitio */
+
+$colorPrincipal: pink;
+
+.nav {
+  background-color: $colorPrincipal;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  .logoBenditoBudin {
+    width: 80px;
+    height: 80%;
+  }
+
+  .ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+    list-style: none;
+    align-items: center;
+    width: 100%;
+  }
+
+  .coloresNav:hover {
+    color: white;
+  }
+  
+  .navProductos {
+    color: grey;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 20px;
+    background-color: $colorPrincipal;
+  }
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.imagenPrincipalIndex {
+  width: 100%;
+  height: 90vh;
+  left: 0px;
+  top: 80px;
+}
+
+/* FOOTER APLICO BEM */
+.footer{
+  display: block;
+  padding: 10px;
+  background-color: $colorPrincipal;
+  display: absolute;
+  width: 100%;
+
+  .footer__logo{
+    width: 80px;
+    height: 80px;
+    display: block;
+  }
+
+  .footer__logo:hover {
+    animation: popUp 0.5s;
+  }
+  
+  .footer__div{
+    align-items: left;
+    display: flex;
+    padding: 10px;
+    display: absolute;
+  }
+
+  .footer__info{
+    align-items: center;
+    display: flex;
+    align-items: inherit;
+    margin-top: 10px;
+    }
+
+  .footer__item{
+    width: 24px;
+    height: 24px;
+    margin: 0px 10px;
+    margin-top: 5px;
+  }
+
+  .footer__texto{
+    padding: 8px;
+    align-items: inherit;
+  }
+}
+
+/* DIV PARA GALERIAS APLICO BEM */
+/* Galeria con productos */
+.galeria{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin-top: 50px;
+  margin-left: 65px;
+  margin-right: 65px;
+
+  .galeria__productos{
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+    
+  .galeria__productos:hover {
+    transform: scale(1.05);
+  } 
+}
+
+.footer{
+  display: block;
+  padding: 10px;
+  background-color: $colorPrincipal;
+  display: absolute;
+  width: 100%;
+}
+
+/* CARD RESPONSIVE */
+/*celulares*/
+/*el nombre de la clase es SELECTOR*/
+
+@media only screen and (max-width: 900px) {
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    margin: 40px;
+  }
+
+  .footer__div {
+    display: block;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+  }
+
+  .footer__div {
+    display: block;
+    flex-direction: column;
+  }
+}
+
+//**CALL TO ACTION HACE TU PEDIDO **//
+.haceTuPedido {
+  background-color: brown;
+  text-decoration: none;
+  color:grey;
+  //** width: 200px; **//
+  height: 25;
+  text-align: center;
+  //** background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); **//
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.haceTuPedido:hover {
+  transform: scale(1.5, 1.5);
+  text-decoration: none;
+  color:grey;
+}
+
+.pedido {
+  text-align: center;
+  text-decoration: none;
+  color:grey;
+}
+
+.linkwsp{
+  text-decoration: none;
+  color:grey;
+}
+
+/* Animations */
+@keyframes popUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logoBenditoBudin:hover {
+  animation: popUp 0.5s;
+}
+
+/* FORMULARIO CONTACTO */
+.formulario {
+  background-color: white;
+  justify-content: flex-end;
+  margin-top: 100px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  
+  .itemsformulario{
+    margin: 10px;
+    margin-left: 10px;
+    color: gray;
+  }
+}
+
+/* ABOUT US */
+.aboutus{
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .aboutimagen{
+    border-radius: 8px;
+    box-shadow: black;
+    width: 650px;
+    height: 500px;
+    align-items: center;
+  justify-content: center;
+  }
+
+  .abouttexto{
+    width: 650px;
+    margin-top: 20px;
+    align-items: center;
+  justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  
+  .aboutimagen{
+    border-radius: 8px;
+    box-shadow: black;
+    width: 900px;
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  .abouttexto{
+    width: 800px;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .aboutimagen{
+    border-radius: 8px;
+    box-shadow: black;
+    width: 600px;
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  .abouttexto{
+    width: 600px;
+    margin-top: 20px;
+  }
+}
+
+/* EVENTOS */
+.eventos{
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  margin-left: 10px;
+  text-align: center;
+
+  .carousel-item{
+    border-radius: 8px;
+    box-shadow: black;
+    width: 650px;
+    height: 500px;
+    text-align: center;
+  }
+
+  .carousel-inner{
+    border-radius: 8px;
+    box-shadow: black;
+   
+  }
+
+  .eventostexto{
+    width: 600px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+/* PRODUCTOS */
+.card{
+  margin-top: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  .linkwsp{
+    text-decoration: none;
+    color: grey;
+    text-decoration: none;
+  }
+}
